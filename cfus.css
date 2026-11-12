@@ -1,0 +1,501 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090709;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 9%;
+    background: rgba(9, 7, 9, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 105, 180, 0.15);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #ff69b4;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #c9c1c8;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff69b4;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background:
+        radial-gradient(
+            circle at 80% 45%,
+            rgba(255, 20, 147, 0.16),
+            transparent 35%
+        ),
+        #090709;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.eyebrow,
+.section-label {
+    color: #ff69b4;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.intro h2 span,
+.projects h2 span,
+.closing h2 span {
+    color: #ff69b4;
+}
+
+.hero-description {
+    color: #aaa0a9;
+    line-height: 2;
+    font-size: 14px;
+    max-width: 550px;
+    margin-bottom: 32px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #ec4899, #be185d);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+}
+
+/* =========================
+   HERO CODE WINDOW
+========================= */
+
+.hero-art {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 340px;
+}
+
+.pink-circle {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: #ec4899;
+    filter: blur(110px);
+    opacity: 0.25;
+}
+
+.code-window {
+    position: relative;
+    z-index: 1;
+    width: 340px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #151015;
+    border: 1px solid rgba(255, 105, 180, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.window-top {
+    display: flex;
+    gap: 7px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #352431;
+}
+
+.window-top span {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ff69b4;
+}
+
+.window-top span:nth-child(2) {
+    opacity: 0.6;
+}
+
+.window-top span:nth-child(3) {
+    opacity: 0.3;
+}
+
+.code-window pre {
+    margin-top: 22px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 2.2;
+    color: #e8d5e1;
+    white-space: pre-wrap;
+}
+
+.pink {
+    color: #ff69b4;
+}
+
+.green {
+    color: #b7e4c7;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.intro {
+    padding: 85px 10%;
+    background: #110c11;
+    border-top: 1px solid #291a25;
+    border-bottom: 1px solid #291a25;
+}
+
+.intro h2,
+.projects h2,
+.closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 45px);
+    margin-bottom: 22px;
+}
+
+.intro > p:last-child {
+    max-width: 750px;
+    color: #aaa0a9;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+.projects {
+    padding: 100px 10%;
+}
+
+.projects-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.subtitle {
+    color: #aaa0a9;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.project-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid #ff69b4;
+    padding-left: 22px;
+}
+
+.project-count span {
+    font-size: 45px;
+    font-weight: 800;
+    color: #ff69b4;
+}
+
+.project-count small {
+    color: #aaa0a9;
+    letter-spacing: 2px;
+    font-size: 9px;
+}
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.project-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-height: 245px;
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        #1a1119,
+        #100b10
+    );
+
+    border: 1px solid #34202e;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #ff69b4;
+    transition: width 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff69b4;
+    box-shadow: 0 15px 40px rgba(255, 20, 147, 0.12);
+}
+
+.project-card:hover::before {
+    width: 100%;
+}
+
+.number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #8f657d;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.project-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 105, 180, 0.12);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    border-radius: 10px;
+
+    color: #ff69b4;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #a99ca7;
+    font-size: 12px;
+}
+
+.view-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #ff69b4;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.closing {
+    text-align: center;
+    padding: 90px 10%;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(236, 72, 153, 0.12),
+            transparent 65%
+        ),
+        #110c11;
+    border-top: 1px solid #291a25;
+}
+
+.closing p:last-child {
+    color: #aaa0a9;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 45px 15px;
+    border-top: 1px solid #34202e;
+    background: #090709;
+}
+
+footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+footer h3 span {
+    color: #ff69b4;
+}
+
+footer p {
+    color: #92858f;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 75px;
+    }
+
+    .hero-art {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 11px;
+    }
+
+    .hero,
+    .intro,
+    .projects {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .code-window {
+        width: 100%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-heading {
+        align-items: flex-start;
+    }
+
+    .project-count span {
+        font-size: 32px;
+    }
+
+    .closing {
+        padding: 75px 7%;
+    }
+}
+
